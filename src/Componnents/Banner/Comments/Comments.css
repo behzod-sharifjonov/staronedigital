@@ -1,0 +1,45 @@
+.comments-card {
+    border-radius: 8px;
+    padding: 18px 30px;
+    background-color: rgba(13, 13, 13, 1);
+    height: 200px;
+    width: 390px;
+}
+
+.comments-card .comment-user img {
+    max-width: 100%;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.comments-card .comment-user{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.comment-user h4{
+    font-size: 15px;
+}
+
+.comment-user span{
+    font-size: 12px;
+    color: #C9C9C9;
+}
+
+.comments-data p{
+    color: white;
+    padding: 12px 0;
+}
+
+
+@media screen and (max-width:767px){
+    .comments-card{
+        width: 370px;
+        margin: 0 10px;
+    }
+    
+}

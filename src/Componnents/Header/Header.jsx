@@ -5,7 +5,7 @@ import header_image from '../../assets/header_image.svg'
 
 function Header() {
     return (
-        <header>
+        <header className='container'>
             <Navbar />
 
             <div className="header-container">
