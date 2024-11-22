@@ -1,0 +1,134 @@
+.contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .contactLeft .icons {
+    display: flex;
+    align-items: center;
+}
+
+.contact .contactLeft .icons .fa-solid {
+    color: rgba(45, 202, 114, 1);
+    font-size: 20px;
+}
+.contact .contactLeft .icons .fa-brands:nth-child(3){
+    margin-right: 20px;
+
+}
+.contact .contactLeft .icons .fa-brands {
+    background-color: rgba(45, 202, 114, 1);
+    font-size: 20px;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.contact .contactLeft .icons h6 {
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
+    padding-left: 13px;
+    padding-right: 50px;
+}
+
+.contact .contactLeft form {
+    display: grid;
+    grid-gap: 20px;
+    margin-top: 100px;
+}
+
+.contact .contactLeft form input {
+    padding: 14px 20px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+}
+
+.contact .contactLeft form textarea {
+    padding: 14px 20px;
+    border-radius: 15px;
+    height: 160px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+}
+
+.contact .contactLeft form button {
+    padding: 14px 0px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 600;
+    color: white;
+    background-color: rgba(61, 212, 126, 1);
+}
+
+.contact .contactRight h4 {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: rgba(201, 201, 201, 1);
+    padding-bottom: 40px;
+}
+.BoxBottom h5 {
+    text-align: center;
+    padding-top: 140px;
+    padding-bottom: 42px;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 500;
+    color: rgba(128, 128, 128, 1);
+}
+@media screen and (max-width:767px) {
+     .contact{
+        display: grid;
+        margin: auto;
+        justify-content: center;
+     }
+     
+     h1 {
+        text-align: center;
+        padding-top: 66px;
+        padding-bottom: 36px;
+     }
+     .contact .contactLeft .icons {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+     }
+     .contact .contactLeft form {
+        margin: 87px 0px 0px  0px;
+     }
+     .contact .contactLeft .icons .fa-brands{
+        background-color: rgba(108, 72, 197, 1);
+     }
+     .contact .contactLeft form button{
+        background-color: rgba(108, 72, 197, 1);
+        box-shadow: 0px 0px 2px 4px rgba(108, 72, 197, 0.5);
+     }
+     .contact .contactRight h4{
+        display: none;
+     }
+     .contact .contactRight img {
+        display: none;
+     }
+     .BoxBottom h5{
+        padding-top: 57px;
+        font-size: 12px;
+        line-height: 13px;
+        font-weight: 500;
+     }
+}

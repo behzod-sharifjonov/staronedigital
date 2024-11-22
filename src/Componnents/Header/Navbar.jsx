@@ -3,7 +3,6 @@ import './Header.css'
 import logo from '../../assets/logo.svg'
 import { Link } from 'react-scroll'
 import mobile_logo from '../../assets/mobile_logo.svg'
-import { IoMenu } from "react-icons/io5";
 
 function Navbar() {
     return (
@@ -52,9 +51,9 @@ function Navbar() {
                     <div className="nav-btn">
                         <button className='btn'>Контакты</button>
                     </div>
-                    <div className="nav-menu">
+                    {/* <div className="nav-menu">
                         <IoMenu className='icon' />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </nav>

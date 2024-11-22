@@ -1,0 +1,30 @@
+
+
+@media screen and (max-width:767px){
+    .card1{
+        display: grid;
+        width: 100%;
+    }
+    .card1 img {
+        display: flex;
+        margin: auto;
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+    .card1 h3 {
+        color: rgba(108, 72, 197, 1);
+        font-size: 16px;
+        line-height: 21px;
+        font-weight: 400;
+        text-align: center;
+        padding-bottom: 16px;
+    }
+    .card1 p.text {
+        color: rgba(201, 201, 201, 1);
+        font-size: 11px;
+        line-height: 17px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+}

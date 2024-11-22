@@ -10,9 +10,27 @@
     font-size: 40px;
 }
 
+.main-projects h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 47px;
+    color: rgba(255, 255, 255, 1);
+    padding-top: 102px;
+    padding-bottom: 46px;
+}
+
 @media screen and (max-width:767px){
     .comments-bg{
         height: 50vh;
+    }
+
+    .main-projects h2 {
+        color: white;
+        font-size: 32px;
+        line-height: 37px;
+        font-weight: 600;
+        text-align: center;
+        padding-bottom: 0;
     }
 
     .comments-bg h2{
