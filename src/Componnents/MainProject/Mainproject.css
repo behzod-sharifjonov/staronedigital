@@ -10,7 +10,7 @@ h1 {
     font-weight: 600;
     line-height: 47px;
     color: rgba(255, 255, 255, 1);
-    padding-top: 102px;
+    padding-top: 50px;
     padding-bottom: 46px;
 }
 .design img {
@@ -21,6 +21,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-top: 50px;
 }
 
 .design .textBox{
@@ -43,4 +44,8 @@ h1 {
 .design:nth-child(3){
     margin-top: 40px;
     background-color: rgba(240, 255, 247, 1);
+}
+
+.main-projects h2 {
+    margin-top: 50px;
 }

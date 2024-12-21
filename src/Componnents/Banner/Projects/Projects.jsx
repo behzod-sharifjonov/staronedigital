@@ -30,7 +30,14 @@ const Projects = () => {
             {
                 breakpoint: 767,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1.5,
+                },
+            },
+
+            {
+                breakpoint: 574,
+                settings: {
+                    slidesToShow: 1.5,
                 },
             },
         ],

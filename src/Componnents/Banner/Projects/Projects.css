@@ -37,3 +37,14 @@
         height: 70px;
     }
 }
+
+@media screen and (max-width: 575px) {
+    .card{
+        width: 230px;
+        height: 100px;
+        padding: 20px;
+        backdrop-filter: blur(90px);
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 5%);
+    }
+}

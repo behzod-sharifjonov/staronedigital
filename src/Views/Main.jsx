@@ -7,8 +7,10 @@ import './Main.css'
 import MainProject from '../Componnents/MainProject/MainProject'
 import ProjectBanner from '../Componnents/Banner/ProjectBanner/ProjectBanner'
 import Contact from '../Componnents/Contact/Contact'
+import { useTranslation } from "react-i18next";
 
 function Main() {
+  const { t } = useTranslation();
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -28,16 +30,16 @@ function Main() {
   return (
     <div>
       <Header />
-      <div className="container">
+      <div className="container" >
         <Projects />
       </div>
       <About />
-      <div className="comments-bg container">
-        <h2>Comments</h2>
+      <div className="comments-bg container" id='section_2-container'>
+        <h2>{t('review')}</h2>
         <Comments />
       </div>
       <div className="main-projects container">
-      <h2>Наши проекты</h2>
+      <h2>{t('our_projects')}</h2>
       {windowWidth > 767 ? <MainProject /> : <ProjectBanner />}
       <Contact/>
       </div>

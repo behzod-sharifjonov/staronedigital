@@ -1,13 +1,16 @@
 import React from "react";
 import Slider from "react-slick";
 import './ProjectBanner.css'
-import ProjectBanner1 from '../../../assets/Case-study__image.svg'
+import mainproject1 from '../../../assets/project_1.png';
+import mainproject2 from '../../../assets/project_2.png';
+import { useTranslation } from "react-i18next";
 
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const ProjectBanner = () => {
+    const { t } = useTranslation();
     const settings1 = {
         infinite: true,
         speed: 700,
@@ -35,29 +38,20 @@ const ProjectBanner = () => {
     return (
         <Slider {...settings1}>
             <div>
-                <div className="card1">
-                    <img src={ProjectBanner1} alt="Card 1" />
-                    <div className="card-body">
-                        <h3>Website Design for SCFC Canada</h3>
-                        <p className="text">Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.</p>
+                <div className="card1" id="section_3-container">
+                    <img src={mainproject1} alt="Card 1" />
+                    <div className="card-body" >
+                        <h3>{t('project_name_1')}</h3>
+                        <p className="text">{t('project_info_1')}</p>
                     </div>
                 </div>
             </div>
             <div>
                 <div className="card1">
-                    <img src={ProjectBanner1} alt="Card 1" />
+                    <img src={mainproject2} alt="Card 1" />
                     <div className="card-body">
-                        <h3>Website Design for SCFC Canada</h3>
-                        <p className="text">Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div className="card1">
-                    <img src={ProjectBanner1} alt="Card 1" />
-                    <div className="card-body">
-                        <h3>Website Design for SCFC Canada</h3>
-                        <p className="text">Born out of a vision, a single-minded objective that puts service before anything else, Swift Clearance and Forwarding Corp. surging forth to deliver the best services in the shipping and logistics scenario. Its meteoric rise stems out of a solid foundation. The management boasts of over 20 years of rich and varied experience in the shipping and freight forwarding industry.</p>
+                        <h3>{t('project_name_2')}</h3>
+                        <p className="text">{t('project_info_2')}</p>
                     </div>
                 </div>
             </div>

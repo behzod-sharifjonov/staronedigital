@@ -1,13 +1,16 @@
 .comments-bg{
-    background-color: rgba(24, 24, 24, 1);
-    height: 60vh;
+    background-color: #131313;
+    height: 430px;
     width: 100%;
 }
 
 .comments-bg h2{
+    font-family: 'Rubik', sans-serif;
     color: white;
-    padding: 50px 0;
+    padding-top: 24px;
+    padding-bottom: 40px;
     font-size: 40px;
+    font-weight: 600;
 }
 
 .main-projects h2 {
@@ -15,13 +18,11 @@
     font-weight: 600;
     line-height: 47px;
     color: rgba(255, 255, 255, 1);
-    padding-top: 102px;
-    padding-bottom: 46px;
 }
 
 @media screen and (max-width:767px){
     .comments-bg{
-        height: 50vh;
+        height: 90vh;
     }
 
     .main-projects h2 {
@@ -35,5 +36,63 @@
 
     .comments-bg h2{
         padding: 50px 10px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .container {
+        height: 100px;
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .main-projects h2 {
+        color: white;
+        font-size: 32px;
+        line-height: 37px;
+        font-weight: 600;
+        text-align: center;
+        padding-bottom: 0;
+    }
+
+    .comments-bg h2{
+        padding: 25px 10px;
+        font-size: 32px;
+        text-align: center;
+        padding: 0 6%
+    }
+
+    .comments-bg{
+        height: 100vh;
+        background-color: transparent;
+        padding: 0 6%
+    }
+
+    .comments-bg .slider-wrapper {
+        margin-right: 0px;
+    }
+
+    .comments-bg .comments-card {
+        background-color: rgba(212, 212, 212, 1%);
+        backdrop-filter: blur(90px);
+        width: 336px;
+        margin: 15px 10px;
+    }
+
+    .main-projects { 
+        margin-top: 100px;
+    }
+
+    .main-projects .slick-slide {
+        margin-right: 0px;
+        
+    }
+
+    .slider-wrapper {
+        display: flex !important;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 50px;
     }
 }

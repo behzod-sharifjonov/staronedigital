@@ -5,16 +5,20 @@
     height: 100vh;
 }
 
+.header-container {
+    height: 100%;
+}
+
 .header-parent {
     height: 100vh;
     position: absolute;
-    width: 80%;
+    width: 100%;
 }
 
 .header-text {
     width: 514px;
     display: flex;
-    gap: 25px;
+    gap: 0px;
     flex-direction: column;
 }
 
@@ -24,21 +28,35 @@
 
 .header-text>h3 {
     color: rgba(108, 72, 197, 1) !important;
-    filter:drop-shadow(2px 2px 25px cyan);
     display: none;
 }
 
 .header-text h1 {
-    font-size: 3.7rem;
+    font-family: 'Rubik', sans-serif; /* Указываем шрифт */
+    font-size: 55px;                /* Размер текста */
+    font-weight: 600;               /* Жирность */
+    line-height: 71.1px;            /* Межстрочный интервал */
+    text-align: left;  
+    padding-bottom: 10px;
+    padding-top: 150px;
 }
 
 .header-text p {
-    font-size: 1.1rem;
+    font-family: 'Rubik', sans-serif; /* Указываем шрифт */
+    font-size: 18px;                /* Размер текста */
+    font-weight: 300;               /* Жирность */
+    line-height: 30px;            /* Межстрочный интервал */
+    text-align: left;  
+    padding-bottom: 35px;
 }
 
 .header-text .btn {
-    margin-top: 15px;
+    margin-top: 0px;
     width: 180px;
+}
+
+.header-text .btn-2 {
+    display: none;
 }
 
 .bubble-container {
@@ -50,11 +68,15 @@
 
 .header-image {
     width: 50%;
+    margin-top: 100px;
+    margin-right: 50px;
 }
 
 .header-image img {
     width: 100%;
+    margin-left: 100px;
 }
+
 
 .bubble {
     position: absolute;
@@ -155,13 +177,13 @@ nav {
     top: 0;
     right: 0;
     left: 0;
-    padding: 20px 7%;
+    padding: 35px 5.5%;
     z-index: 999;
     cursor: pointer;
 }
 
 .logo .pc-logo {
-    width: 250px;
+    width: 200px;
 }
 
 .logo .mobile-logo{
@@ -171,26 +193,23 @@ nav {
 .navbar,
 .navbar ul,
 .navbar .nav-btns {
-    gap: 40px;
+    gap: 50px;
 }
 
-.navbar ul>a {
-    color: white;
-    font-size: 18px;
+.navbar ul > a {
+    color: rgb(182, 182, 182);
+    font-size: 16px;
     padding: 5px 7px;
+    font-weight: 300; /* Установим на 500 как в вашем запросе */
+    line-height: 21.94px; /* Строка высоты */
+    text-align: left; /* Выравнивание текста влево */
+    text-underline-position: from-font; /* Подчёркивание с позиции шрифта */
+    text-decoration-skip-ink: none; /* Скипинг чернил на подчеркивании */
+    font-family: 'Montserrat', sans-serif;
 }
 
-.navbar ul>a:first-child {
-    border-bottom: 2px solid rgba(61, 212, 126, 1);
-}
-
-.nav-select>select {
-    background-color: rgba(58, 57, 57, 1);
-    border: none;
-    padding: 5px 7px;
-    border-radius: 12px;
-    font-size: 18px;
-    color: white;
+.navbar .nav-link:hover {
+    color: white; /* Цвет текста при наведении */
 }
 
 .btn {
@@ -202,11 +221,74 @@ nav {
     font-weight: 500;
     background-color: rgba(61, 212, 126, 1);
     color: rgba(255, 255, 255, 1);
+    position: absolute;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.btn-2 {
+    display: none;
 }
 
 .nav-menu>.icon {
     color: white;
     font-size: 35px;
+    display: none;
+}
+
+.nav-select {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 50px;
+    background-color: rgba(54, 54, 54, 0.3); /* 0.5 — это уровень прозрачности */
+    transition: background-color 0.3s ease;
+}
+
+.nav-select:hover span {
+    color: #ffffff; /* Новый цвет текста для ru и uz при наведении */
+}
+
+.nav-select:hover .language-flag {
+    scale: 1.0; /* Новый цвет текста для ru и uz при наведении */
+}
+
+.language-flag {
+    width: 25px; /* Размер флага */
+    height: 25px;
+    margin-right: 7px;
+}
+
+.nav-select span {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(182, 182, 182);
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.burger-menu {
+    display: none; /* Скрыто по умолчанию */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.burger-line {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.mobile-menu {
     display: none;
 }
 
@@ -269,5 +351,355 @@ nav {
 
     .nav-menu>.icon{
         display: flex;
+    }
+}
+
+@media screen and (max-width: 575px) { 
+    /* Стили для экранов шириной до 575px */
+    nav {
+        width: 100%;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .logo .mobile-logo {
+        display: flex;
+        width: 40px;
+    }
+
+    .logo .pc-logo {
+        display: none;
+    }
+
+    .bubble-container {
+        display: none;
+    }
+
+    .container-main {
+        width: 100%;
+        height: 700px;
+    }
+
+    .header-text>h3 {
+        color: #9E80EA !important;
+        display: flex;
+        font-size: 16px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+    }
+
+    .header-text>h1 {
+        margin-top: 0;
+        padding-top: 0;
+        text-align: center;
+        line-height: 40px;
+        font-size: 32px;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .header-text {
+        margin-top: 100px;
+    }
+
+    .header-text>p {
+        text-align: center;
+        font-size: 13px;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        line-height: 15px;
+        width: 352px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Количество строк */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .header-text .btn {
+        /* margin-top: 102px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 132px;
+        height: 42px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        background-color: #6C48C5;
+        color: white; */
+        display: none;
+    }
+
+    .header-text .btn-2 {
+        display: flex;
+    }
+
+        /* Основные стили кнопки */
+    .animated-button {
+        margin-top: 100px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Выравниваем по левому краю */
+        padding-left: 18px; /* Отступ слева */
+        width: 135px;
+        height: 42px;
+        border-radius: 50px;
+        background-color: #6C48C5; /* Основной цвет кнопки */
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+        box-shadow: 0px 0px 10px rgba(108, 72, 197, 70%); /* Внешняя тень */
+        border: 2px solid rgba(110, 74, 198, 0.5); /* Строка для анимации */
+        padding-right: 18px; /* Отступ справа для текста */
+    }
+
+    .animated-button:active {
+        transform: scale(0.95); /* Сужаем кнопку при нажатии */
+        box-shadow: 0px 0px 8px #4b36a2; /* Меняем тень при нажатии */
+      }
+
+    /* Внешний эффект тени */
+    .animated-button::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 50px;
+        box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3); /* Внутренняя тень */
+    }
+
+    /* Звезды */
+    .stars {
+        position: absolute;
+        left: 0; /* Звезды будут слева */
+        transform: translateY(-50%); /* Центрируем относительно вертикали */
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        gap: 5px;
+        padding-top: 10px; /* Отступ сверху для звезд */
+        padding-bottom: 10px; /* Отступ снизу для звезд */
+    }
+
+    /* Индивидуальные звезды */
+    .star {
+        position: absolute;
+        animation: pulse 4s infinite;
+        opacity: 0.8;
+    }
+
+    .star1 {
+        left: 19px;
+        top: 10px;
+        width: 6px;
+        height: 6px;
+    }
+
+    .star2 {
+        left: 26px;
+        top: 14px;
+        width: 11px;
+        height: 11px;
+        animation-delay: 1.5s; /* Задержка анимации для второй звезды */
+    }
+
+    .star3 {
+        left: 18px;
+        top: 24px;
+        width: 8px;
+        height: 8px;
+        animation-delay: 3s; /* Задержка анимации для третьей звезды */
+    }
+
+    /* Анимация для звезд */
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+            opacity: 0.3;
+        }
+        50% {
+            transform: scale(1.3);
+            opacity: 1;
+        }
+    }
+
+    /* Текст кнопки */
+    .btn-2 {
+        position: absolute;
+        right: 15px; /* Отступ справа для текста */
+        z-index: 1;
+    }
+
+    /* Анимация для обводки */
+    /* @keyframes stroke-animate {
+        0% {
+            border-color: transparent;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        50% {
+            border-color: #6E4AC6;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+        }
+        100% {
+            border-color: transparent;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+    } */
+
+    /* Обводка для кнопки */
+    .button-stroke {
+        position: absolute;
+        inset: 0;
+        border-radius: 50px;
+        border: 1px solid #6E4AC6; /* Цвет обводки */
+        animation: stroke-animate 3s infinite;
+        box-shadow: 0px 0px 80px rgba(108, 72, 197, 100%);
+    }
+
+    .button-stroke::before {
+        box-shadow: inset 0 0 10px rgba(255, 255, 255, 25%);
+    }
+
+    /* Отображение бургер-меню на мобильных устройствах */
+    .burger-menu {
+        display: flex;
+        justify-content: center;
+        margin-left: 15px;
+        width: 19px;
+        height: 14px;
+        z-index: 30;
+    }
+
+    /* Стили для мобильного меню */
+    .mobile-menu {
+        display: block;/* Скрыто по умолчанию */
+        position: fixed;
+        top: -120%;
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        padding: 10px;
+        z-index: 20;
+        background-color: rgba(71, 71, 71, 0.5);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        padding-top: 125px;
+        transition-duration: .3s;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition: top 1s ease-in-out;
+    }
+
+    .mobile-navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .mobile-menu.open {
+        display: block; /* Показываем меню, когда оно открыто */
+        top: 0;
+    }
+
+    .mobile-menu ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .mobile-menu .nav-link {
+        display: block;
+        padding: .5rem 1rem;
+        text-align: center;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .logo .mobile-logo {
+        position: relative;
+        z-index: 30;
+    }
+
+    .nav-select {
+        z-index: 30;
+    }
+
+    /* освновной бекгроунд */
+
+    .animated-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    /* Контейнер для кругов */
+    .circle-container {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        width: 390px; /* Диаметр вращения */
+        height: 600px;
+        transform: translate(-50%, -50%);
+        animation: rotate-container 30s linear infinite;
+    }
+
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.8;
+    }
+    
+    .red {
+        width: 90px;
+        height: 90px;
+        background: #01AAFF;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .blue {
+        width: 90px;
+        height: 90px;
+        background: #FF00B8;
+        top: 50%;
+        left: 60%;
+        transform: translateY(-10%);
+    }
+    
+    .yellow {
+        width: 90px;
+        height: 90px;
+        background: #00FF6F;
+        top: 40%;
+        left: 15%;
+        transform: translateX(-50%)
+    }
+
+    /* Анимация вращения контейнера */
+    @keyframes rotate-container {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+
+    /* Размытый слой поверх */
+    .blur-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(90px);
+        z-index: 1;
     }
 }

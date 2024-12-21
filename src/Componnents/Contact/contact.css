@@ -1,3 +1,7 @@
+.main-contact h1{
+    margin-top: 100px;
+}
+
 .contact {
     width: 100%;
     display: flex;
@@ -23,6 +27,7 @@
     color: white;
     padding: 8px;
     border-radius: 10px;
+    margin-right: 10px;
 }
 
 .contact .contactLeft .icons h6 {
@@ -71,6 +76,7 @@
     font-size: 14px;
     line-height: 17px;
     font-weight: 600;
+    cursor: pointer;
     color: white;
     background-color: rgba(61, 212, 126, 1);
 }

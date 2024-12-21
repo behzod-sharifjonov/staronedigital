@@ -28,3 +28,23 @@
     }
 
 }
+
+@media screen and (max-width:575px) {
+    .card1 img {
+        display: flex;
+        margin: auto;
+        margin-top: 70px;
+        margin-bottom: 30px;
+        width: 100%;
+        padding: 20px 40px;
+    }
+
+    .card1 p.text {
+        color: rgba(201, 201, 201, 1);
+        font-size: 11px;
+        line-height: 17px;
+        font-weight: 400;
+        text-align: center;
+        padding: 0px 27px;
+    }
+}

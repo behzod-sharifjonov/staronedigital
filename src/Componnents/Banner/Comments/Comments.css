@@ -1,9 +1,19 @@
+.slick-slide {
+    margin-right: 15px;
+}
 .comments-card {
-    border-radius: 8px;
-    padding: 18px 30px;
-    background-color: rgba(13, 13, 13, 1);
-    height: 200px;
-    width: 390px;
+    border-radius: 12px;
+    padding: 20px 40px;
+    background-color: #0D0D0D;
+    height: 191px;
+    width: 422px;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    margin-right: 20px;
 }
 
 .comments-card .comment-user img {
@@ -22,17 +32,37 @@
 }
 
 .comment-user h4{
-    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.0;
+    margin-top: 10px;
+}
+
+.comment-company {
+    display: flex;
+    flex-direction: column; /* элементы будут располагаться вертикально */
+    gap: 0px; /* уменьшение отступа между именем и названием компании */
 }
 
 .comment-user span{
     font-size: 12px;
-    color: #C9C9C9;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #adadad;
 }
 
 .comments-data p{
     color: white;
-    padding: 12px 0;
+    font-family: 'Rubik', sans-serif; 
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 15px 0;
+    margin-top: 5px;
+    max-height: 5.2em; /* Ограничиваем максимальную высоту для 3 строк */
+    overflow: hidden; /* Скрываем переполнение */
+    text-overflow: ellipsis; /* Добавляем многоточие для длинных строк */
 }
 
 
@@ -42,4 +72,11 @@
         margin: 0 10px;
     }
     
+}
+
+@media screen and (max-width: 575px) {
+    .comments-card{
+        width: 336px;
+        margin: 0 10px;
+    }
 }
